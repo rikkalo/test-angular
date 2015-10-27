@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+
+    <script data-require="angular.js@*" data-semver="1.3.0-beta.5" src="bower_components/angular/angular.js"></script>
+
+    <script data-require="jquery@*" data-semver="2.1.1" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.1.1" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script data-require="ui-router@*" data-semver="0.2.10" src="https://rawgit.com/angular-ui/ui-router/0.2.10/release/angular-ui-router.js"></script>
+
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular-sanitize.min.js"></script>
+
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <script type="text/javascript" src="bower_components/angular-mocks/angular-mocks.js"></script>
+
+
+
+    <script src="app/app.js"></script>
+
+
+    <script src="app/modules/products/products.js"></script>
+    <script src="app/modules/products/scripts/ProductsController.js"></script>
+
+
+  </head>
+
+  <body>
+    <div class="container-fluid" ng-app="sample" ng-controller="ProductsController">
+      <div  ng-include src="'app/modules/products/views/products.html'"></div>
+      <div id="masterUI" ui-view="master">
+      </div>
+    </div>
+  </body>
+
+</html>
