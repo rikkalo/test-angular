@@ -16,9 +16,14 @@
             content: 'content'
         }];
 
-        $httpBackend.whenGET(/\.html/).passThrough();
+       $httpBackend.whenGET(/\.html/).passThrough();
 
-        $httpBackend.whenGET('/products/').respond(products);
+       $httpBackend.whenGET('/products').respond(products);
+
+       $httpBackend.whenGET('/products').respond(function(url) {
+        console.log("Getting products");
+        return [200, products, {}];
+       });
 
         // var newsId = -1;
         // $httpBackend.whenGET(function(url) {

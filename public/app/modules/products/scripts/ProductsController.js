@@ -1,18 +1,25 @@
 "use strict"
 angular.module('products')
-    .controller('ProductsController', function($scope) {
-      var self = this;
+    .controller('ProductsController', function($scope, $http) {
+      $scope.update = function() {
+    $http.get('/products').success(function(data) {
+      $scope.products = data;
+    });
+  };
 
-     $scope.products = [];
-     function init() {
-         $scope.products = [{
-             title: 'Product1',
-             description:'description1'
-         }, {
-             title: 'Product2',
-             description:'description2'
-         }];
-     };
+    $scope.update();
 
-     init();
+
+    //  $scope.products = [];
+    //  function init() {
+    //      $scope.products = [{
+    //          title: 'Product1',
+    //          description:'description1'
+    //      }, {
+    //          title: 'Product2',
+    //          description:'description2'
+    //      }];
+    //  };
+     //
+    //  init();
     });
