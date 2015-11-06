@@ -18,25 +18,10 @@
 
        $httpBackend.whenGET(/\.html/).passThrough();
 
-       $httpBackend.whenGET('/products').respond(products);
+       $httpBackend.whenGET('/products/').respond(products);
 
        $httpBackend.whenGET('/products').respond(function(url) {
         console.log("Getting products");
         return [200, products, {}];
        });
-
-        // var newsId = -1;
-        // $httpBackend.whenGET(function(url) {
-        //     var regexp = /^\/news\/\?id=([1-9])+/;
-        //     var match = url.match(regexp);
-        //     if (match && typeof match[1] !== 'undefined') {
-        //         newsId = (url.match(regexp)[1]) - 1;
-        //     }
-        //     return regexp.test(url);
-        // }).respond(function() {
-        //     if (typeof news[newsId] == 'undefined') {
-        //         return [404, {}];
-        //     }
-        //     return [200, news[newsId]];
-        // });
     });

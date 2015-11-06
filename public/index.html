@@ -20,21 +20,24 @@
     <script type="text/javascript" src="bower_components/angular-mocks/angular-mocks.js"></script>
 
 
-
     <script src="app/app.js"></script>
 
-
     <script src="app/modules/products/products.js"></script>
-    <script src="app/modules/products/scripts/ProductsController.js"></script>
     <script src="app/modules/products/tests/E2E.js"></script>
+    <script src="app/modules/products/config/states.js"></script>
+    <script src="app/modules/products/scripts/productsController.js"></script>
+    <script src="app/modules/products/scripts/ProductsService.js"></script>
+
+    <script src="app/modules/products/scripts/appController.js"></script>
+
 
 
   </head>
 
   <body>
-    <div class="container-fluid" ng-app="sample" ng-controller="ProductsController">
-      <div  ng-include src="'app/modules/products/views/products.html'"></div>
-      <div id="masterUI" ui-view="master">
+
+    <div class="container-fluid" ng-app="sample" ng-controller="AppController">
+      <div id="masterUI" ui-view="products">
       </div>
     </div>
   </body>
