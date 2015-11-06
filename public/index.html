@@ -28,6 +28,12 @@
     <script src="app/modules/products/scripts/productsController.js"></script>
     <script src="app/modules/products/scripts/ProductsService.js"></script>
 
+    <script src="app/modules/comments/comments.js"></script>
+    <script src="app/modules/comments/tests/E2E.js"></script>
+    <script src="app/modules/comments/config/states.js"></script>
+    <script src="app/modules/comments/scripts/commentsController.js"></script>
+    <script src="app/modules/comments/scripts/CommentsService.js"></script>
+
     <script src="app/modules/products/scripts/appController.js"></script>
 
 
@@ -37,7 +43,10 @@
   <body>
 
     <div class="container-fluid" ng-app="sample" ng-controller="AppController">
-      <div id="masterUI" ui-view="products">
+      <div ui-view="navbar"></div>
+      <div ui-view="products">
+      </div>
+      <div ui-view="comments">
       </div>
     </div>
   </body>

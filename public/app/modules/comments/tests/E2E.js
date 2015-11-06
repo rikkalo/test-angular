@@ -1,22 +1,22 @@
  "use strict"
- angular.module('products')
+ angular.module('comments')
     .run(function($httpBackend) {
 
-        var products = [{
+        var comments = [{
             id: 1,
             title: 'title',
-            content: 'content <h2>Hello</h2>'
+            text: 'text1'
         }, {
             id: 2,
             title: 'title32',
-            content: 'content'
+            text: 'text2'
         }, {
             id: 3,
             title: 'title',
-            content: 'content'
+            text: 'text3'
         }];
 
        $httpBackend.whenGET(/\.html/).passThrough();
 
-       $httpBackend.whenGET('/products/').respond(products);
+       $httpBackend.whenGET('/comments/').respond(comments);
     });

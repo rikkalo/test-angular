@@ -1,16 +1,16 @@
 "use strict"
-angular.module('products')
+angular.module('comments')
    .config(function estateConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider
-            .state('products', {
-                url: '/products',
+            .state('comments', {
+                url: '/comments',
                 views: {
                   "navbar": {
                       templateUrl: 'app/modules/products/views/navbar.html'
                   },
-                    "products": {
-                        controller: 'productsController',
-                        templateUrl: 'app/modules/products/views/products.html'
+                    "comments": {
+                        controller: 'commentsController',
+                        templateUrl: 'app/modules/comments/views/comments.html'
                     }
                 }
             })
