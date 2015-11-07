@@ -4,16 +4,16 @@
 
         var products = [{
             id: 1,
-            title: 'title',
-            content: 'content <h2>Hello</h2>'
+            name: 'title1',
+            price: 10
         }, {
             id: 2,
-            title: 'title32',
-            content: 'content'
+            name: 'title2',
+            price: 21
         }, {
             id: 3,
-            title: 'title',
-            content: 'content'
+            name: 'title3',
+            price: 15
         }];
 
        $httpBackend.whenGET(/\.html/).passThrough();
