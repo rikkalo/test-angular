@@ -4,4 +4,5 @@ angular.module('products')
         Products.getList().success(function(data) {
             $scope.products = data;
         });
+        $scope.orderBy = 'id';
     });

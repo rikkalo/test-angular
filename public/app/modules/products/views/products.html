@@ -1,13 +1,13 @@
 <table class="table table-striped table-bordered" >
 			<thead>
 				<tr>
-					<th>Id</th>
+					<th href="" ng-click="orderBy='id'">Id</th>
 					<th>Name</th>
-          <th>Price</th>
+          <th href="" ng-click="orderBy='price'">Price</th>
 				</tr>
 			</thead>
 
-			<tr ng-repeat="product in products" >
+			<tr ng-repeat="product in products | orderBy: orderBy" >
 				<td>{{product.id}}</td>
 				<td>{{product.name}}</td>
 				<td>{{product.price}}</td>
