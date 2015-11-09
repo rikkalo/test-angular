@@ -3,16 +3,16 @@
     .run(function($httpBackend) {
 
         var comments = [{
-            user: 'User1',
-            title: 'title1',
+            userName: 'User1',
+            date: '9:11:2015',
             text: 'text1'
         }, {
-            user: 'User2',
-            title: 'title2',
+            userName: 'User2',
+            date: '20:01:2015',
             text: 'text2'
         }, {
-            user: 'User3',
-            title: 'title3',
+            userName: 'User3',
+            date: '1:12:2015',
             text: 'text3'
         }];
 
